@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    @switch ((string)ViewData["ViewName"])
+    {
+    case "Home":
+    <link rel="stylesheet" href="~/css/home.css" type="text/css">
+    break;
+    case "Sobre":
+    <link rel="stylesheet" href="~/css/Sobre.css">
+    break;
+    case "Atendimento":
+    <link rel="stylesheet" href="~/css/Atendimento.css">
+    break;
+    case "Cadastro":
+    <link rel="stylesheet" href="~/css/Cadastro.css">
+    break;
+    case "Login":
+    <link rel="stylesheet" href="~/css/Login.css">
+    break;
+    }
+    <link href="https://fonts.googleapis.com/css?family=Nova+Square|Squada+One" rel="stylesheet">
+    <title>@ViewData["ViewName"] Ponto Digital</title>
+</head>
+
+<body>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <!--TODO: Terminar footer: Localização, email e, talvez, mapa e endereço-->
+        <div class="container">
+            <div class="icones">
+                <img src="~/Iconografia/facebookFooter.png" alt="Ícone do Facebook">
+                <img src="~/Iconografia/instagramFooter .png" alt="Ícone do Facebook">
+                <img src="~/Iconografia/twitterFooter.png" alt="Ícone do Facebook">
+                <img src="~/Iconografia/linkedinFooter.png" alt="Ícone do Facebook">
+            </div>
+            <div class="mapaDoSite">
+                <p>Mapa do site</p>
+                <a href="#inicio">Topo desta página</a></br>
+                <a href='@Url.Action("Sobre","Home")'>Sobre nós</a></br>
+                <a href='@Url.Action("Atendimento", "Home")'>Atendimento</a></br>
+            </div>
+        </div>
+    </footer>
+
+</body>
+@switch ((string)ViewData["ViewName"])
+{
+case "Home":
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+break;
+case "Sobre":
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+break;
+}
+
+</html>

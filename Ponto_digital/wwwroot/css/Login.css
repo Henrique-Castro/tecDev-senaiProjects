@@ -1,0 +1,51 @@
+h2 {
+    margin: 0 0 1em 0;
+    color: #dc8b44;
+    font-size: 3em;
+    font-family: 'Nova Square', cursive;
+    text-transform: uppercase;
+}
+body {
+    width: 100%;
+}
+#formLogin > div {
+    margin: 2em 0;
+}
+section {
+    text-align: center;
+    border: 0.5em solid #dc8b44;
+    border-radius: 1em;
+    margin: auto;
+    width: 25%;
+    height: 30em;
+    padding: 1em;
+}
+section a {
+    color: white;
+    font-size: 1.3em;
+}
+section > a:hover {
+    color: #dc8b44;
+}
+section p {
+    color: white;
+    font-size: 1.1em;
+}
+section p > a:hover {
+    color: #dc8b44;
+}
+label {
+    font-size: 1.8em;
+    font-family: 'Nova Square', cursive;
+    color: #dc8b44;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+input {
+    width: 100%;
+    margin-top: 0.2em;
+    text-align: center;
+    font-size: 1.8em;
+    height: 2em;
+    border-radius: 0.3em;
+}

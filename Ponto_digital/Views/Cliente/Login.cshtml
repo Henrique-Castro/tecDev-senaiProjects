@@ -1,0 +1,19 @@
+@{
+    Layout = "_Layout";
+    Html.RenderPartial("_HeaderNavBar");
+}
+        <section>
+            <h2>Login</h2>
+            <form id="formLogin" action="login.php">
+                <div>
+                    <label for="email">Email</label></br>
+                    <input name="email" type="email" maxlength="100" minlength="15">
+                </div>
+                <div>
+                    <label for="senha">Senha</label></br>
+                    <input name="senha" type="password" maxlength="25" minlength="8"></br>
+                </div>
+            </form>
+            <a href="#">Esqueceu a senha?</a>
+            <p>Caso ainda não seja cadastrado, <a href='@Url.Action("Cadastro", "Cliente")'>cadastre-se aqui</a></p>
+        </section>

@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    letter-spacing: 0.1em;
+}
+/*
+----------------#SOBRE----------------
+*/
+#sobre {
+    display: flex;
+    justify-content: center;
+    height: 30em;
+}
+#sobre iframe {
+    height: 100%; 
+    width: 100%;
+}
+#sobre h2 {
+    text-align: center;
+    color: #dc8b44;
+    font-size: 3em;
+    font-family: 'Nova Square', cursive;
+}
+#sobre > div {
+    width: 50%;
+    padding: 0 4em;
+}
+#sobre p {
+    color: white;
+    font-size: 2em;
+}
+#sobre div:nth-child(odd) {
+    display: flex;
+    justify-content: center;
+}
+/*
+----------------#DESTAQUES----------------
+*/
+#destaques {
+    color: white;
+    margin: 10em 5em;
+}
+#destaques h2 {
+    text-align: left;
+    margin: 0 0 5em 0;
+    text-transform: uppercase;
+    margin-left: 2em;
+    font-family: 'Nova Square', cursive;
+    font-size: 2.4em;
+    color: #dc8b44;
+}
+#destaques .container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+#destaques .content {
+    width: 22%;
+    font-size: 1.5em;
+}
+#destaques a {
+    text-transform: uppercase;
+    color: white;
+}
+#destaques a:hover {
+    color: #dc8b44;
+}
+#destaques .estrelas {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.5em;
+    width: 50%;
+    margin: 1em 0 1em 2.5em;
+    background-color: rgba(0, 0, 0, 0.226);
+    height: 15%;
+    width: 70%;
+    border-radius: 8%;
+}
+#destaques .estrelas img {
+    width: 12%;
+    height: 65%;
+}
+#destaques .empresa {
+    text-transform: uppercase;
+    margin: 0.4em 0;
+    text-decoration-line: underline;
+}
+/*
+----------------#PLANOS----------------
+*/
+#planos h2 {
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 1.2em;
+    font-family: 'Nova Square', cursive;
+    font-size: 2.4em;
+    color: #dc8b44;
+}
+/* APENAS A CAIXA 'GRATUITO' + ALGUNS ATRIBUTOS EM COMUM*/
+#planos .gratuito {
+    width: 95%;
+    border: 0.5em solid #dc8b44;
+    margin-left: 3em;
+}
+#planos .logoH3 {
+    display: flex;
+    margin: 2em 0 0 3em;
+    align-content: center;
+    justify-content: left;
+    width: 30%;
+}
+#planos h3 {
+    text-transform: uppercase;
+    font-family: 'Nova Square', cursive;
+    color: #dc8b44;
+    font-size: 2.5em;
+    margin: 0.3em 0 0 0.6em; 
+}
+#planos .texto {
+    margin: 3em 0 1em 10em;
+    font-size: 1.4em;
+    color: white;
+    width: 50%;
+}
+#planos .descricao {
+    margin-bottom: 2em;
+}
+#planos .caracteristicas {
+    margin-top: 0.3em;
+}
+#planos .caixaPreco {
+    position: relative;
+    left: 83%;
+    bottom: 1.5em;
+    background-color: #dc8b44;
+    width: 17%;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+#planos .icone {
+    background-color: #ce7324;
+    height: 17%;
+    width: 26%;
+    text-align: center;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+#planos .preco {
+    color: white;
+    font-family: 'Nova Square', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.3em 1.7em 0 0;
+}
+/* CAIXAS FILHAS DE .CONTAINER (ALGUMAS ALTERAÇÕES) */
+#planos .container {
+    display: flex;
+}
+#planos .container > div {
+    border: 0.5em solid #dc8b44;
+    margin-top: 1.5em;
+    margin-left: 3em;
+    width: 21.86%;
+}
+#planos .container h3 {
+    font-size: 2em;
+}
+#planos .container .logoH3 {
+    margin-left: 0.5em;
+}
+#planos .contauner h3 {
+    margin-left: 0;
+}
+#planos .container .texto {
+    margin-left: 2em;
+    width: 85%;
+}
+#planos .container .caixaPreco {
+    top: -0.7em;
+    left: 50%;
+    width: 50%;
+    height: 16%;
+    font-size: 0.7em;
+}
+#planos .container .preco {
+    margin: 0.5em 1.7em 0 0.5em;
+}
+#planos .container .icone {
+    width: 50%;
+    height: 100%;
+}
+#planos .mensais {
+    position: relative;
+    right: 8.7em;
+    top: 2em;
+    color: white;
+    font-family: 'Nova Square', cursive;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+/*
+----------------#NOTICIAs----------------
+*/
+#noticias h2 {
+    margin: 2em 0;
+    text-align: center;
+    color: #dc8b44;
+    font-size: 3em;
+    font-family: 'Nova Square', cursive;
+}
+.slideshow-container img {
+    width: 100%;
+    height: 50em;
+}
+/* Slideshow container */
+#noticias .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+  }
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+      height: 4em;
+    color: #f2f2f2;
+    font-size: 2em;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 84%;
+    width: 100%;
+    text-align: left;
+    background-color: #000000b7;
+    padding: 1.2em 0 0 1em;
+  }
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  } 
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  } 
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  } 
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  @media screen and (max-width: 1700px){
+    #planos .container > div {
+        border: 0.5em solid #dc8b44;
+        margin-top: 1.5em;
+        margin-left: 3em;
+        width: 21.4%;
+    }
+    body {
+        letter-spacing: 0;
+    }
+    #planos .preco{
+        font-size: 1.5em;
+    }
+    #planos .mensais{
+        right: 6em;
+    }
+}
+@media screen and (max-width: 1000px){
+    #sobre {
+        display: block;
+    }
+    .yt-video{
+        display: none;
+    }
+}

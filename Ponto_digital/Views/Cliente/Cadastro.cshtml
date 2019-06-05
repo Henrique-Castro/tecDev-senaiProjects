@@ -1,0 +1,37 @@
+@{
+    Layout = "_Layout";
+    Html.RenderPartial("_HeaderNavBar");
+}
+        <section>
+            <h2>Cadastro</h2>
+            <form id="formCadastro" action="cadastro.php">
+                    <div class="container">
+                        <div>
+                            <label for="primeiroNome">Primeiro nome</label></br>
+                            <input name="primeiroNome" type="text" maxlength="25" minlength="2"></br>
+                            <label for="empresa">Nome da empresa</label></br>
+                            <input name="empresa" type="text" maxlength="75" minlength="4"></br>
+                            <label for="telefone">Telefone para contato</label></br>
+                            <input name="telefone" type="tel" maxlength="14" minlength="10"></br>
+                            <label name="senha" for="senha">Senha</label></br>
+                            <input name="senha" type="password">
+                            <input name="enviar" type="submit" value="Cadastrar">
+                        </div>
+                        <div>
+                            <label for="sobrenome">Sobrenome</label></br>
+                            <input name="sobrenome" type="text" maxlength="75" minlength="4"></br>
+                            <label for="segmento">Segmento da empresa</label></br>
+                            <select>
+                                <option value="segmento1">segmento1</option>
+                                <option value="segmento2">segmento2</option>
+                                <option value="segmento3">segmento3</option>
+                                <option value="segmento4">segmento4</option>
+                            </select></br>
+                            <label for="email">Email</label></br>
+                            <input name="email" type="email" maxlength="100" minlength="15"></br>
+                            <label name="confirmarSenha" for="confirmarSenha">Confirmar senha</label></br>
+                            <input name="confirmarSenha" type="password">
+                        </div>
+                    </div>
+                </form>
+        </section>

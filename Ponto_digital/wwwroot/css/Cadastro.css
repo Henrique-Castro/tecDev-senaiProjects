@@ -1,0 +1,70 @@
+h2 {
+    margin: 0 0 1em 0;
+    color: #dc8b44;
+    font-size: 3em;
+    font-family: 'Nova Square', cursive;
+    text-transform: uppercase;
+}
+section {
+    text-align: center;
+    border: 0.5em solid #dc8b44;
+    border-radius: 1em;
+    margin: auto;
+    width: 80%;
+    padding: 1em;
+}
+label {
+    font-size: 1.8em;
+    font-family: 'Nova Square', cursive;
+    color: #dc8b44;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+form .container {
+    display: flex;
+}
+form .container > div {
+    width: 45%;
+}
+input {
+    width: 80%;
+    height: 1.9em;
+    font-size: 1.7em;
+    border-radius: 0.4em;
+    padding-left: 0.5em;
+}
+select {
+    font-size: 1.7em;
+    height: 2em;
+    padding: 0.3em 0.5em;
+}
+textarea {
+    width: 180%;
+    height: 10em;
+    border-radius: 1em;
+    font-size: 1.7em;
+    padding: 1em;
+}
+input[type=submit] {
+    width: 35%;
+    height: 16%;
+    padding: 0.4em 0;
+    align-self: flex-end;
+    border-radius: 1em;
+    align-items: center;
+    font-family: 'Nova Square', cursive;
+    font-size: 2em;
+    color: whitesmoke;
+    background-color:#dc8b44;
+    border: 1em black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 1em;
+}
+input[type=submit]:hover {
+    cursor: pointer;
+    color: #293972;
+}
+option {
+    padding: 0.5em;
+}

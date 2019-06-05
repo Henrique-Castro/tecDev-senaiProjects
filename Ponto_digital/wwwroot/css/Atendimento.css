@@ -1,0 +1,209 @@
+h2 {
+    margin: 0 5em;
+    text-align: left;
+    color: #dc8b44;
+    font-size: 3em;
+    font-family: 'Nova Square', cursive;
+    text-transform: uppercase;
+}
+/*
+----------------FAQ----------------
+*/
+#faq {
+    display: block;
+}
+#faq .container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 14em;
+}
+#faq .barra {
+    position: relative;
+    top: -3em;
+    height: 30em;
+    width: 0.5em;
+    background-color: #dc8b44;
+}
+#faq p {
+    margin: 1em 0;
+}
+#faq p a {
+    margin-left: 0;
+    color: #dc8b44;
+}
+#faq p a:hover {
+    color: white;
+}
+#faq .resposta {
+    display: none;
+    background-color: rgba(100, 94, 94, 0.5);
+    padding: 1em 1em;
+}
+#faq ul {
+    color: white;
+    margin: 2em 3em;
+}
+#faq li {
+    list-style-image: url('../Iconografia/arrow-list-icon.png');
+    font-size: 1.7em;
+    margin: 1.5em 0; 
+}
+#faq a {
+    margin-left: 0.5em;
+}
+#faq a:hover {
+    cursor: pointer;
+}
+#faq .obs {
+    color: #ffffff;
+    margin-left: 10em;
+    font-size: 1.5em;
+}
+#faq .asterisco {
+    color: #dc8b44;
+    font-size: 1.5em;
+}
+/*
+----------------COMENTARIOS----------------
+*/
+#comentarios {
+    margin: 10em 0;
+}
+#comentarios .container {
+    display: block;
+    width: 100%;
+}
+#comentarios form {
+    margin: 1.5em 0 0 32em;
+    width: 50%;
+    height: 100%;
+}
+#comentarios input[type=submit] {
+    width: 25%;
+    height: 7%;
+    padding: 0.4em 0;
+    align-self: flex-end;
+    border-radius: 1em;
+    align-items: center;
+    font-family: 'Nova Square', cursive;
+    font-size: 2em;
+    color: whitesmoke;
+    background-color:#dc8b44;
+    border: 1em black;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0.1em 0.1em #ffffff;
+    position: relative;
+    left: 75%;
+    margin-top: 1em;
+}
+#comentarios input[type=submit]:hover {
+    cursor: pointer;
+    color: #293972;
+}
+#comentarios textarea {
+    width: 100%;
+    height: 5em;
+    border-radius: 1em;
+    font-size: 1.5em;
+}
+#comentarios .verComentarios {
+    width: 80%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 1em;
+    padding-bottom: 1em;
+}
+#comentarios .verComentarios > div:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+} 
+#comentarios .verComentarios div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+#comentarios .verComentarios img {
+    height: 5em;
+    width: 5em;
+}
+#comentarios .informacoes {
+    margin: auto -13% auto 0;
+    font-family: 'Nova Square', cursive;
+    font-size: 1.5em;
+}
+#comentarios .textoComentario {
+    font-size: 1.5em;
+    margin-left: -10em;
+    padding: 1em;
+    border-left: 0.2em solid #dc8b44;
+}
+#comentarios h3 {
+    font-family: 'Nova Square', cursive;
+}
+/*
+----------------CONTATO----------------
+*/
+#contato label {
+    font-size: 1.8em;
+    font-family: 'Nova Square', cursive;
+    color: #dc8b44;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+#contato form {
+    background-color: whitesmoke;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 1em;
+    padding: 3em;
+}
+#contato form .container {
+    display: flex;
+}
+#contato form .container > div {
+    width: 45%;
+}
+#contato input {
+    width: 80%;
+    height: 1.9em;
+    font-size: 1.7em;
+    border-radius: 0.4em;
+    padding-left: 0.5em;
+}
+#contato select {
+    font-size: 1.7em;
+    height: 2em;
+    padding: 0.3em 0.5em;
+}
+#contato textarea {
+    width: 180%;
+    height: 10em;
+    border-radius: 1em;
+    font-size: 1.7em;
+    padding: 1em;
+}
+#contato input[type=submit] {
+    width: 25%;
+    height: 9%;
+    padding: 0.4em 0;
+    align-self: flex-end;
+    border-radius: 1em;
+    align-items: center;
+    font-family: 'Nova Square', cursive;
+    font-size: 2em;
+    color: whitesmoke;
+    background-color:#dc8b44;
+    border: 1em black;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0.1em 0.1em #ffffff;
+    margin-top: 1em;
+}
+#contato input[type=submit]:hover {
+    cursor: pointer;
+    color: #293972;
+}
+#contato option {
+    padding: 0.5em;
+}
