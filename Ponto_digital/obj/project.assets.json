@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46885473820\\Documents\\gitHub\\Ponto_digital\\Ponto_digital.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\gitHub\\tecDev-senaiProjects\\Ponto_digital\\Ponto_digital.csproj",
       "projectName": "Ponto_digital",
-      "projectPath": "C:\\Users\\46885473820\\Documents\\gitHub\\Ponto_digital\\Ponto_digital.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\gitHub\\tecDev-senaiProjects\\Ponto_digital\\Ponto_digital.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46885473820\\Documents\\gitHub\\Ponto_digital\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\gitHub\\tecDev-senaiProjects\\Ponto_digital\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

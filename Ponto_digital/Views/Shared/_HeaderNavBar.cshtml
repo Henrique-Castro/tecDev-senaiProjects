@@ -1,6 +1,7 @@
 <header id="inicio">
-        <nav class="navMenu">
-            <ul>
+            <img id = "menuButton" onclick="ToggleMenu()" src="~/Iconografia/hambIcon.png" class="invisible1" alt="'Hamburguer' icon, press to slide the menu">
+        <nav id="navMenu">
+            <ul id="menuList" class="invisible">
                 <li><a  href='@Url.Action("Index", "Home")'>Home</a></li>
                 <li><a href='@Url.Action("Index", "Home")#planos'>Planos</a></li>
                 <li><a href='@Url.Action("Sobre", "Home")'>Sobre nós</a></li>

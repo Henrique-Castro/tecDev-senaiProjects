@@ -10,7 +10,7 @@
     @switch ((string)ViewData["ViewName"])
     {
     case "Home":
-    <link rel="stylesheet" href="~/css/home.css" type="text/css">
+    <link rel="stylesheet" href="~/css/Home.css" type="text/css">
     break;
     case "Sobre":
     <link rel="stylesheet" href="~/css/Sobre.css">
@@ -127,5 +127,17 @@ case "Sobre":
 </script>
 break;
 }
-
+<script>
+    function ToggleMenu(){
+        var menu = document.getElementById("menuList")
+        if(menu.classList.contains("invisible")){
+            menu.classList.remove("invisible");
+            menu.classList.add("visible");
+        }
+        if(menu.classList.contains("visible")){
+           menu.classList.remove("visible");
+           menu.classList.add("invisible");
+        }
+    }
+</script>
 </html>
