@@ -325,6 +325,10 @@ body {
     #planos .mensais{
         right: 6em;
     }
+    #destaques .content{
+        border-bottom: rgba(255, 255, 255, 0.514) 1px solid;
+        padding-bottom: 1em;
+    }
 }
 @media screen and (max-width: 1000px){
     #sobre {
@@ -395,5 +399,113 @@ body {
     }
     #noticias{
         padding: 1.5em;
+    }
+}
+@media screen and (max-width: 415px){
+    #sobre h2{
+        font-size: 1.5em;
+    }
+    #sobre > div{
+        padding: 0 0.2 0 0;
+        text-align: left;
+    }
+    #sobre div:nth-child(2n+1){
+        top: 42em;
+        padding: 0 0.3em;
+    }
+    #destaques{
+        margin: 10em 0 0 0;
+    }
+    #destaques h2{
+        margin: 0 0 0 0.5em;
+        white-space: pre-wrap;
+        font-size: 1.5em;
+    }
+    #destaques .content{
+        font-size: initial;
+    }
+    #destaques .content img{
+        width: 50%;
+    }
+    #planos h2{
+        font-size: 1.5em;
+        margin-left: 0.6em;
+    }
+    #planos{
+        width: 100vw;
+    }
+    #planos .gratuito{
+        width: 95%;
+        margin-left: 0.6em;
+    }
+    #planos .gratuito h3 {
+        font-size: 1.5em;
+        margin: 1em 0.5em;
+    }
+    #planos .logoH3 img{
+        width: 15%;
+        height: 10%;
+        margin-top: 0.8em;
+    }
+    #planos .texto {
+        margin: 1em 0 0 2em;
+    }
+    #planos .caixaPreco{
+        width: 35%;
+        left: 65%;
+    }
+    #planos .gratuito .preco{
+        font-size: 1.2em;
+    }
+    #planos .preco {
+        font-size: 1.7em; 
+        margin: 1em 0.2em 0 0;
+        padding-bottom: 10%;
+    }
+    #planos .gratuito .icone{
+        width: 45%;
+        height: 130%;
+        padding: 0.5em;
+    }
+    #planos .gratuito .icone img{
+        width: 120%;
+    }
+    #planos .container > div {
+        width: 95%;
+        margin-left: 0.6em;
+    }
+    #planos h3{
+        margin: 0.6em;
+        font-size: 1.5em;
+    }
+    #planos .container h3{
+        margin-left: 0.5em;
+    }
+    #planos .container .caixaPreco{
+        top: -2em;
+    }
+    #noticias h2{
+        margin: 0.5em 0;
+        font-size: 1.7em;
+    }
+    #noticias .slideshow-container {
+
+        max-width: 1000px;
+        position: relative;
+        margin: 1em 0;
+    
+    }
+    .text{
+        display: none;
+    }
+    .slideshow-container img {
+
+        width: 100%;
+        height: 15em;
+    
+    }
+    footer img{
+        width: 2em;
+        height: 2em;
     }
 }

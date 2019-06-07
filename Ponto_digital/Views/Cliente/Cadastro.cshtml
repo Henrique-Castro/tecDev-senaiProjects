@@ -4,7 +4,7 @@
 }
         <section>
             <h2>Cadastro</h2>
-            <form id="formCadastro" action="cadastro.php">
+            <form id="formCadastro" action="">
                     <div class="container">
                         <div>
                             <label for="primeiroNome">Primeiro nome</label></br>
@@ -20,13 +20,20 @@
                         <div>
                             <label for="sobrenome">Sobrenome</label></br>
                             <input name="sobrenome" type="text" maxlength="75" minlength="4"></br>
-                            <label for="segmento">Segmento da empresa</label></br>
+                            <div style="display:flex;">
+                                <label for="segmento">Segmento da empresa</label>
+                            <label for="dataNascimento">Data de nascimento</label>
+                            </div>
+                            
+                            <div style="display:flex;">
                             <select>
                                 <option value="segmento1">segmento1</option>
                                 <option value="segmento2">segmento2</option>
                                 <option value="segmento3">segmento3</option>
                                 <option value="segmento4">segmento4</option>
-                            </select></br>
+                            </select>
+                            <input type="date" name="dataDeNascimento">
+                            </div>
                             <label for="email">Email</label></br>
                             <input name="email" type="email" maxlength="100" minlength="15"></br>
                             <label name="confirmarSenha" for="confirmarSenha">Confirmar senha</label></br>

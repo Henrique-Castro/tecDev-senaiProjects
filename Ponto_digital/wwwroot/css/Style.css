@@ -204,35 +204,29 @@ footer img:hover {
 		left: 17vw;
 	}
 }
-@media screen and (max-width: 1000px) {
-	#navMenu {
-		margin-left: 1em;
-	}
+@media screen and (max-width: 800px) {
 	#menuList {
 		justify-content: space-around;
 		top: 3vh;
-		left: 9vw;
+		left: 1em;
 	}
 	.navBar {
-		top: 1.8em;
-		left: 8.2em;
+		top: 1.4em;
+		left: -4.5em;
 		height: 0.9vh;
 		width: 85vw;
 	}
 	#navMenu a {
-		font-size: 1.5em;
-	}
-	#menuList {
-		left: 14em;
+		font-size: 1.3em;
 	}
 	#login {
-		left: 13vw;
+		left: 10vw;
 	}
 	h1 {
 		white-space: nowrap;
 		top: 6em;
-		left: -0.5em;
-		font-size: 1.4em;
+		left: -10em;
+		font-size: 1.2em;
 	}
 	header {
 		height: 30vh;
@@ -252,8 +246,11 @@ footer img:hover {
         z-index: 1;
         width: 100vw;
         height: 50vh;
-        
-    }
+		background-color: rgba(0, 0, 0, 0.445);
+	}
+	#menuList a{
+		color: white;
+	}
     #menuButton{
         display: block;
         z-index: 2;
@@ -269,5 +266,8 @@ footer img:hover {
     }
     h1{
         display: none;
-    }
+	}
+	header{
+		height: 15vh;
+	}
 }

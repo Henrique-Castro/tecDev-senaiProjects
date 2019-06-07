@@ -7,25 +7,25 @@
             <div class="container">
                 <div class="barra"></div>
                 <ul>
-                    <li>
-                        <a class="pergunta" onclick="toggle()">Como posso esclarecer minhas dúvidas antes de adquirir o
+                    <li onclick="FaqToggle(this)">
+                        <a class="pergunta">Como posso esclarecer minhas dúvidas antes de adquirir o
                             software?</a> </br>
-                        <div class="resposta">
+                        <div class="invisible1 resposta">
                             <p>Através do nosso serviço de atendimento via email, basta preencher nosso <a href="#contato">formulário</a>.</p>
                         </div>
                     </li>
-                    <li>
-                        <a class="pergunta" onclick="toggle()">É possível negociar os preços dos planos?</a> </br>
-                        <div class="resposta">
+                    <li onclick="FaqToggle(this)">
+                        <a class="pergunta">É possível negociar os preços dos planos?</a> </br>
+                        <div class="invisible1 resposta">
                             <p>A 'Agora Vai' não negocia os preços de seus planos. Com exceção do plano Personalizado,
                                 que é
                                 destinado a equipes maiores de 500 pessoas.</p>
                         </div>
                     </li>
-                    <li>
-                        <a class="pergunta" onclick="toggle()">Por que eu não consigo deixar minha opinião na sessão de
+                    <li onclick="FaqToggle(this)">
+                        <a class="pergunta">Por que eu não consigo deixar minha opinião na sessão de
                             comentários?</a> </br>
-                        <div class="resposta">
+                        <div class="invisible1 resposta">
                             <p>Nós da Agora Vai, valorizamos muito a opinião de nossos clientes. Por isso, para que seu
                                 comentário possa ser submetido a nós, é preciso ter <a href="login.html" href="_blank">entrado
                                     em sua conta</a> no site e ter realizado uma compra. </br>
@@ -33,19 +33,19 @@
                                 <a href="#contato">contato</a>!</p>
                         </div>
                     </li>
-                    <li>
-                        <a class="pergunta" onclick="toggle()">Concluí o pedido, e agora?</a> </br>
-                        <div class="resposta">
+                    <li onclick="FaqToggle(this)">
+                        <a class="pergunta">Concluí o pedido, e agora?</a> </br>
+                        <div class="invisible1 resposta">
                             <p>Após concluído o processo de pedido, nós somos notificados via email. Uma vez
                                 notificados, processaremos sua requisição e responderemos dentro do período de tempo
                                 especificado em cada plano com informações sobre o método de pagamento e a instalação
                                 do software. </p>
                         </div>
                     </li>
-                    <li>
-                        <a class="pergunta" onclick="toggle()">Por que não consigo acessar a página para fazer o
+                    <li onclick="FaqToggle(this)">
+                        <a class="pergunta">Por que não consigo acessar a página para fazer o
                             pedido?</a> </br>
-                        <div class="resposta">
+                        <div class="invisible1 resposta">
                             <p>Para realizar qualquer pedido, é preciso, antes, estar cadastrado. Essa é uma medida que
                                 visa a segurança tanto do cliente quanto da AgoraVai.</p>
                         </div>
@@ -89,7 +89,7 @@
                     <form id="commentForm" action="comentario.php">
                         <h3>Deixe o seu: </h3>
                         <textarea name="comentario" form="commentForm"></textarea></br>
-                        <input name="enviar" type="submit" value="Submeter">
+                        <input name="enviar" type="submit" value="Enviar">
                     </form>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                         <input name="assunto" type="text" maxlength="100" minlength="5"></br>
                         <label for="mensagem">Mensagem</label></br>
                         <textarea name="mensagem" form="formulario"></textarea></br>
-                        <input name="enviar" type="submit">
+                        <input name="enviar" value="Enviar" type="submit">
                     </div>
                     <div>
                         <label for="sobrenome">Sobrenome</label></br>

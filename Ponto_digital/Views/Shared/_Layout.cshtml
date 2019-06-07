@@ -126,18 +126,33 @@ case "Sobre":
     }
 </script>
 break;
+case "Atendimento":
+<script>
+    function FaqToggle(pergunta) {
+        var resposta = pergunta.getElementsByTagName("div");
+        if(resposta[0].classList.contains("invisible1")){
+            resposta[0].classList.remove("invisible1");
+        }else{
+            resposta[0].classList.add("invisible1");
+        }
+        
+    }
+</script>
+break;
 }
 <script>
-    function ToggleMenu(){
+    function ToggleMenu() {
         var menu = document.getElementById("menuList")
-        if(menu.classList.contains("invisible")){
+        if (menu.classList.contains("invisible")) {
             menu.classList.remove("invisible");
             menu.classList.add("visible");
-        }
-        if(menu.classList.contains("visible")){
-           menu.classList.remove("visible");
-           menu.classList.add("invisible");
+        } else {
+            if (menu.classList.contains("visible")) {
+                menu.classList.remove("visible");
+                menu.classList.add("invisible");
+            }
         }
     }
 </script>
+
 </html>
