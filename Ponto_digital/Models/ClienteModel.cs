@@ -23,7 +23,7 @@ namespace Ponto_digital.Models
             Senha = senha;
             DataDeNascimento = dataDeNascimento;
         }
-        // Construtor para os métodos Listar
+        // Construtores para os métodos Listar
         public ClienteModel(int id,string nome, string nomeEmpresa, string telefone, string email, string senha, DateTime dataDeNascimento){
             Id = id;
             Nome = nome;
@@ -32,6 +32,12 @@ namespace Ponto_digital.Models
             Email = email;
             Senha = senha;
             DataDeNascimento = dataDeNascimento;
+        }
+        public ClienteModel(int id,string nome, string email, string senha){
+            Id = id;
+            Nome = nome;
+            Email = email;
+            Senha = senha;
         }
     }
 }

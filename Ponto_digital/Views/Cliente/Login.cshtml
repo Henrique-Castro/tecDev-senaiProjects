@@ -4,15 +4,16 @@
 }
         <section>
             <h2>Login</h2>
-            <form id="formLogin" action="login.php">
+            <form id="form" action="/Cliente/FazerLogin" method="POST">
                 <div>
                     <label for="email">Email</label></br>
                     <input name="email" type="email" maxlength="100" minlength="15">
                 </div>
                 <div>
                     <label for="senha">Senha</label></br>
-                    <input name="senha" type="password" maxlength="25" minlength="8"></br>
+                    <input name="senha" type="password" maxlength="25" minlength="5"></br>
                 </div>
+                <input value="Entrar" type="submit"/>
             </form>
             <a href="#">Esqueceu a senha?</a>
             <p>Caso ainda não seja cadastrado, <a href='@Url.Action("Cadastro", "Cliente")'>cadastre-se aqui</a></p>

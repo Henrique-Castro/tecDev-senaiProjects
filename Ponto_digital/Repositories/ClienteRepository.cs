@@ -15,13 +15,9 @@ namespace Ponto_digital.Repositories
                 File.Create(CLIENTES_PATH);
             }
             ListaDeClientes = Listar();
-            // ListaDeClientes == null ? cliente.Id = 1 : cliente.Id = ListaDeClientes.Count + 1;
-            if(ListaDeClientes == null){
-                cliente.Id = 1;
-            }else{
-                cliente.Id = ListaDeClientes.Count + 1;
-            }
-            File.AppendAllText(CLIENTES_PATH, $"{cliente.Id};{cliente.Nome};{cliente.Telefone};{cliente.NomeEmpresa};{cliente.Email};{cliente.Senha};{cliente.DataDeNascimento}");
+            cliente.Id = ListaDeClientes == null ? 1 : ListaDeClientes.Count + 1;
+
+            File.AppendAllText(CLIENTES_PATH, $"\n{cliente.Id};{cliente.Nome};{cliente.Email};{cliente.Senha};{cliente.Telefone};{cliente.NomeEmpresa};{cliente.DataDeNascimento}");
         }
         public static List<ClienteModel> Listar(){
             ListaDeClientes.Clear();
@@ -30,16 +26,27 @@ namespace Ponto_digital.Repositories
             {
                 if(linha != null){
                 var dados = linha.Split(";");
+                if(int.Parse(dados[0]) == 1){
+                    var cliente = new ClienteModel(
+                        id:int.Parse(dados[0]),
+                        nome:dados[1],
+                        email:dados[2],
+                        senha:dados[3]
+                    );
+                    ListaDeClientes.Add(cliente);
+                }
+                else{
                 var cliente = new ClienteModel(
                     id:int.Parse(dados[0]),
                     nome:dados[1],
-                    telefone:dados[2],
-                    nomeEmpresa:dados[3],
-                    email:dados[4],
-                    senha:dados[5],
-                    dataDeNascimento: DateTime.ParseExact(dados[6],"dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture)
+                    telefone:dados[4],
+                    nomeEmpresa:dados[5],
+                    email:dados[2],
+                    senha:dados[3],
+                    dataDeNascimento: DateTime.Parse(dados[6])
                 );
                 ListaDeClientes.Add(cliente);
+                }
                 }
             }
             return ListaDeClientes;

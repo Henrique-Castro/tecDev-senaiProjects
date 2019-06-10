@@ -1,41 +1,75 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Ponto_digital.Models;
 using Ponto_digital.Repositories;
+using Ponto_digital.Utils;
 
-namespace Ponto_digital.Controllers
-{
-    public class ClienteController : Controller
-    {
-        public IActionResult Index(){
+namespace Ponto_digital.Controllers {
+    public class ClienteController : Controller {
+        public IActionResult Index () {
             ViewData["ViewName"] = "Login";
-            return View("Login");
+            return View ("Login");
         }
-        public IActionResult Cadastro(){
+        public IActionResult Cadastro () {
             ViewData["ViewName"] = "Cadastro";
-            return View();
+            return View ();
         }
-        public IActionResult CadastrarCliente(IFormCollection form){
-            if(form["senha"].Equals(form["confirmarSenha"])){
-            var cliente = new ClienteModel(
-                nome:form["primeiroNome"] + form["sobrenome"],
-                nomeEmpresa:form["empresa"],
-                telefone:form["telefone"],
-                email:form["email"],
-                senha:form["senha"],
-                dataDeNascimento:DateTime.ParseExact(form["dataDeNascimento"],"dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture)
-            );
-            ClienteRepository.Inserir(cliente);
-            // TODO: TELA DE SUCESSO
-            return View();
-            }else{
+
+        [HttpPost]
+        public IActionResult CadastrarCliente (IFormCollection form) {
+            if (!form["senha"].Equals (form["confirmarSenha"])) {
+                return View ("Cadastro");
                 // TODO: TELA DE SENHAS NÃO COMPATÍVEIS
-                return View();
+
+            } else {
+                var cliente = new ClienteModel (
+                    nome: form["primeiroNome"] + form["sobrenome"],
+                    nomeEmpresa: form["empresa"],
+                    telefone: form["telefone"],
+                    email: form["email"],
+                    senha: form["senha"],
+                    dataDeNascimento: DateTime.Parse (form["dataDeNascimento"])
+                );
+                ClienteRepository.Inserir (cliente);
+                ViewData["ViewName"] = "Login";
+                return View ("Login");
+                // TODO: TELA DE SUCESSO
             }
         }
-        public IActionResult FazerLogin(IFormCollection form){
-            return View();
+
+        [HttpPost]
+        public IActionResult FazerLogin (IFormCollection form) {
+            List<ClienteModel> listaDeClientes = ClienteRepository.Listar ();
+            foreach (var cliente in listaDeClientes) {
+                if (cliente == null) {
+                    ViewData["ViewName"] = "Login";
+                    return View ("Login");
+                }
+                if (cliente.Email.Equals ("admin@agoravai.com") && cliente.Senha.Equals ("admin")) {
+                    HttpContext.Session.SetString (ConstantesUtils.SESSION_ADMINISTRADOR, "ADMINISTRADOR");
+                    HttpContext.Session.SetString (ConstantesUtils.SESSION_CLIENTE, "Administrador");
+                    return RedirectToAction ("Index", "Home"); //TODO TELA DE ADMINISTRADOR
+                } else {
+                    if (cliente.Email.Equals (form["email"]) && cliente.Senha.Equals (form["senha"])) {
+                        HttpContext.Session.SetString (ConstantesUtils.SESSION_CLIENTE, cliente.Nome);
+                        HttpContext.Session.SetString (ConstantesUtils.SESSION_EMAIL, cliente.Email);
+                        HttpContext.Session.SetString(ConstantesUtils.SESSION_ADMINISTRADOR, "");
+                    }
+                    return RedirectToAction ("Index", "Home");
+                }
+            }
+
+            return RedirectToAction ("Index", "Home");
+        }
+        public IActionResult Logout () {
+            HttpContext.Session.Remove (ConstantesUtils.SESSION_CLIENTE);
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString (ConstantesUtils.SESSION_ADMINISTRADOR))) {
+                HttpContext.Session.Remove (ConstantesUtils.SESSION_ADMINISTRADOR);
+            }
+            HttpContext.Session.Remove (ConstantesUtils.SESSION_EMAIL);
+            return RedirectToAction ("Index", "Home");
         }
     }
 }
