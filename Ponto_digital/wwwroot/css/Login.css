@@ -49,3 +49,13 @@ input {
     height: 2em;
     border-radius: 0.3em;
 }
+.warning{
+    text-transform: uppercase;
+    background-color: red;
+    width: 108%;
+    padding: 1em 1.5em;
+    position: relative;
+    right: 1em;
+    bottom: 1em;
+    z-index: -1;
+}

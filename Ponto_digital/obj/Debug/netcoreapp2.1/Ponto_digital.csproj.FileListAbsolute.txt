@@ -56,3 +56,5 @@ C:\Users\46885473820\Documents\gitHub\tecDev-senaiProjects\Ponto_digital\obj\Deb
 C:\Users\46885473820\Documents\gitHub\tecDev-senaiProjects\Ponto_digital\obj\Debug\netcoreapp2.1\Ponto_digital.dll
 C:\Users\46885473820\Documents\gitHub\tecDev-senaiProjects\Ponto_digital\obj\Debug\netcoreapp2.1\Ponto_digital.pdb
 C:\Users\46885473820\Documents\gitHub\tecDev-senaiProjects\Ponto_digital\obj\Debug\netcoreapp2.1\Ponto_digital.csproj.CopyComplete
+C:\Users\46885473820\Documents\gitHub\tecDev-senaiProjects\Ponto_digital\obj\Debug\netcoreapp2.1\Razor\Views\Administrador\ControlPanel.g.cshtml.cs
+C:\Users\46885473820\Documents\gitHub\tecDev-senaiProjects\Ponto_digital\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs

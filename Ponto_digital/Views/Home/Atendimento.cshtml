@@ -1,6 +1,7 @@
 @{
     Layout = "_Layout";
     Html.RenderPartial("_HeaderNavBar");
+    
 }
         <section id="faq">
             <h2>Perguntas frequentes</h2>
@@ -86,11 +87,19 @@
                         <p class="textoComentario">Excelente, cortei custos da minha empresa com home office apenas com
                             este software. </p>
                     </div>
-                    <form id="commentForm" action="comentario.php">
-                        <h3>Deixe o seu: </h3>
-                        <textarea name="comentario" form="commentForm"></textarea></br>
-                        <input name="enviar" type="submit" value="Enviar">
-                    </form>
+                    @if(!String.IsNullOrEmpty(ViewBag.User))
+                    {
+                        <form method="POST" id="commentForm" action="/Comentario/CriarComentario">
+                            <h3>Deixe o seu: </h3>
+                            <textarea name="conteudo"></textarea><br/>
+                            <input name="enviar" type="submit" value="Enviar"/>
+                        </form>
+                    }else
+                    {
+                        <div class="desativado">
+                            <p>Apenas usuários cadastrados podem deixar comentários.<a href='Url.Action("Index","Cliente")'>Faça seu login aqui.</a></p>
+                        </div>
+                    }     
                 </div>
             </div>
         </section>

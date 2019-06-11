@@ -51,6 +51,17 @@ namespace Ponto_digital.Repositories
             }
             return ListaDeClientes;
         }
+        public static ClienteModel ObterClientePor(string email){
+            ListaDeClientes = Listar();
+
+            foreach (var item in ListaDeClientes)
+            {
+                if(item.Email.Equals(email)){
+                    return item;
+                }   
+            }
+            return null;
+        }
         
     }
 }

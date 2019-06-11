@@ -2,7 +2,11 @@
     Layout = "_Layout";
     Html.RenderPartial("_HeaderNavBar");
 }
+        
         <section>
+             @if(!String.IsNullOrEmpty((string)ViewData["Mensagem"])){
+            <p class="warning">@ViewData["Mensagem"]</p>
+            }
             <h2>Login</h2>
             <form id="form" action="/Cliente/FazerLogin" method="POST">
                 <div>

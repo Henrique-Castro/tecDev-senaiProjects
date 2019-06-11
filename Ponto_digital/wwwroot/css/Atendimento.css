@@ -345,4 +345,7 @@ h2 {
     #comentarios textarea{
         padding: 1em;
     }
+    .desativado{
+        background-color: rgba(105, 105, 105, 0.561);
+    }
 }

@@ -47,25 +47,27 @@ namespace Ponto_digital.Controllers {
                     ViewData["ViewName"] = "Login";
                     return View ("Login");
                 }
-                if (cliente.Email.Equals ("admin@agoravai.com") && cliente.Senha.Equals ("admin")) {
+                if (!form["email"].Equals ("admin@agoravai.com") && !form["senha"].Equals ("admin")) {
+                    if (form["email"].Equals (cliente.Email) && form["senha"].Equals (cliente.Senha)) {
+                        HttpContext.Session.SetString (ConstantesUtils.SESSION_CLIENTE, cliente.Nome);
+                        HttpContext.Session.SetString (ConstantesUtils.SESSION_EMAIL, cliente.Email);
+
+                        return RedirectToAction ("Index", "Home");
+                    }
+                } else {
                     HttpContext.Session.SetString (ConstantesUtils.SESSION_ADMINISTRADOR, "ADMINISTRADOR");
                     HttpContext.Session.SetString (ConstantesUtils.SESSION_CLIENTE, "Administrador");
                     return RedirectToAction ("Index", "Home"); //TODO TELA DE ADMINISTRADOR
-                } else {
-                    if (cliente.Email.Equals (form["email"]) && cliente.Senha.Equals (form["senha"])) {
-                        HttpContext.Session.SetString (ConstantesUtils.SESSION_CLIENTE, cliente.Nome);
-                        HttpContext.Session.SetString (ConstantesUtils.SESSION_EMAIL, cliente.Email);
-                        HttpContext.Session.SetString(ConstantesUtils.SESSION_ADMINISTRADOR, "");
-                    }
-                    return RedirectToAction ("Index", "Home");
                 }
             }
-
-            return RedirectToAction ("Index", "Home");
+            ViewData["Mensagem"] = "Email ou senha incorretos.";
+            Console.Write ("Passou");
+            ViewData["ViewName"] = "Login";
+            return View ("Login");
         }
         public IActionResult Logout () {
             HttpContext.Session.Remove (ConstantesUtils.SESSION_CLIENTE);
-            if (!String.IsNullOrEmpty(HttpContext.Session.GetString (ConstantesUtils.SESSION_ADMINISTRADOR))) {
+            if (!String.IsNullOrEmpty (HttpContext.Session.GetString (ConstantesUtils.SESSION_ADMINISTRADOR))) {
                 HttpContext.Session.Remove (ConstantesUtils.SESSION_ADMINISTRADOR);
             }
             HttpContext.Session.Remove (ConstantesUtils.SESSION_EMAIL);

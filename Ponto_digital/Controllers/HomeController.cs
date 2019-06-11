@@ -9,18 +9,20 @@ namespace Ponto_digital.Controllers
         [HttpGet]
         public IActionResult Index(){
             ViewData["ViewName"] = "Home";
-            ViewData["User"] = HttpContext.Session.GetString(ConstantesUtils.SESSION_CLIENTE);
-            ViewData["Tipo"] = HttpContext.Session.GetString(ConstantesUtils.SESSION_ADMINISTRADOR);
+            ViewBag.User = HttpContext.Session.GetString(ConstantesUtils.SESSION_CLIENTE);
+            ViewBag.Adm = HttpContext.Session.GetString(ConstantesUtils.SESSION_ADMINISTRADOR);
             return View();
         }
         public IActionResult Atendimento(){
             ViewData["ViewName"] = "Atendimento";
-            ViewData["Tipo"] = HttpContext.Session.GetString(ConstantesUtils.SESSION_ADMINISTRADOR);
+            ViewBag.User = HttpContext.Session.GetString(ConstantesUtils.SESSION_CLIENTE);
+            ViewBag.Adm = HttpContext.Session.GetString(ConstantesUtils.SESSION_ADMINISTRADOR);
             return View();
         }
         public IActionResult Sobre(){
             ViewData["ViewName"] = "Sobre";
-            ViewData["Tipo"] = HttpContext.Session.GetString(ConstantesUtils.SESSION_ADMINISTRADOR);
+            ViewBag.User = HttpContext.Session.GetString(ConstantesUtils.SESSION_CLIENTE);
+            ViewBag.Adm = HttpContext.Session.GetString(ConstantesUtils.SESSION_ADMINISTRADOR);
             return View();
         }
     }
