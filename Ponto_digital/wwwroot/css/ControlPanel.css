@@ -1,0 +1,36 @@
+.flexContainer{
+    display: flex;
+}
+header{
+    height: 50vh;
+}
+h2 {
+    margin: 0.2em 0;
+    text-align: left;
+    color: #dc8b44;
+    font-size: 3em;
+    font-family: 'Nova Square', cursive;
+    text-transform: uppercase;
+    text-align: center;
+}
+#contadores{
+    width: 100vw;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+}
+.content{
+    width: 25%;
+    text-align: center;
+}
+.aguardando{
+    background-color: grey;
+}
+.aprovados{
+    background-color: green;
+}
+.reprovados{
+    background-color: red;
+}

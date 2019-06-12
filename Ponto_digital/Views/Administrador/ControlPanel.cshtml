@@ -1,7 +1,50 @@
 @{
-    Layout = "_Layout";
-    Html.RenderPartial("_HeaderNavBar");
+Layout = "_Layout";
+Html.RenderPartial("_HeaderNavBar");
 }
 <section id="contadores">
-    
+    <h2>Comentários</h2>
+    <div class="container flexContainer">
+        <div class="content aguardando">
+            <h3>Aguardando:</h3>
+            <p>@Model.ListaDeComentariosEmEspera.Count</p>
+        </div>
+        <div class="content aprovados">
+            <h3>Aprovados:</h3>
+            <p>@Model.ListaDeComentariosAprovados.Count</p>
+        </div>
+        <div class="content reprovados">
+            <h3>Reprovados:</h3>
+            <p>@Model.ListaDeComentariosReprovados.Count</p>
+        </div>
+    </div>
+</section>
+<section id="emEspera">
+    <table>
+        <thead>
+            <th>Cliente</th>
+            <th>Data</th>
+            <th>Conteúdo</th>
+        </thead>
+        <tbody>
+            @foreach (var item in @Model.ListaDeComentariosEmEspera)
+            {
+            <tr>
+                <td>
+                    @item.Cliente.Nome
+                </td>
+                <td>
+                    @item.Data
+                </td>
+                <td>
+                    @item.Conteudo
+                </td>
+                <td>
+                    <a href='@Url.Action("AprovarComentario", "Administrador")?idComentario=@item.IdComentario'
+                        class="btn aprovar">Aprovar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
 </section>

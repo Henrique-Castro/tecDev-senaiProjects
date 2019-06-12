@@ -25,7 +25,7 @@ namespace Ponto_digital.Controllers {
 
             } else {
                 var cliente = new ClienteModel (
-                    nome: form["primeiroNome"] + form["sobrenome"],
+                    nome: form["primeiroNome"] + " " + form["sobrenome"],
                     nomeEmpresa: form["empresa"],
                     telefone: form["telefone"],
                     email: form["email"],

@@ -105,6 +105,7 @@ h2 {
     height: 5em;
     border-radius: 1em;
     font-size: 1.5em;
+    padding: 1em;
 }
 #comentarios .verComentarios {
     width: 80%;
@@ -139,6 +140,17 @@ h2 {
 }
 #comentarios h3 {
     font-family: 'Nova Square', cursive;
+}
+#comentarios a {
+    margin-left: 0.5em;
+    color: #dc8b44;
+}
+#comentarios a:hover {
+    cursor: pointer;
+    color: black;
+}
+#comentarios .desativado p {
+    font-size: 1.5em;
 }
 /*
 ----------------CONTATO----------------

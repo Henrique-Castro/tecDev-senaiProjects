@@ -69,7 +69,7 @@ using Ponto_digital.Models;
             WriteLiteral("        <section>\r\n            <h2>Cadastro</h2>\r\n            ");
             EndContext();
             BeginContext(136, 2436, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc6b46bbff474c75b7cafcd5175c1391", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "136336992922461e8a3afcdfe172a470", async() => {
                 BeginContext(203, 1509, true);
                 WriteLiteral(@"
                     <div class=""container"">
@@ -98,7 +98,7 @@ using Ponto_digital.Models;
                                 ");
                 EndContext();
                 BeginContext(1712, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69965c814a80423dbdb7d90cc096e279", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c9204c027934047b038cca2e50c556a", async() => {
                     BeginContext(1738, 9, true);
                     WriteLiteral("segmento1");
                     EndContext();
@@ -120,7 +120,7 @@ using Ponto_digital.Models;
                 WriteLiteral("\r\n                                ");
                 EndContext();
                 BeginContext(1790, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "adcd431da40b4afcb3083ec8ac872d64", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9082984955f24d08987bdbaf7f7e649e", async() => {
                     BeginContext(1816, 9, true);
                     WriteLiteral("segmento2");
                     EndContext();
@@ -142,7 +142,7 @@ using Ponto_digital.Models;
                 WriteLiteral("\r\n                                ");
                 EndContext();
                 BeginContext(1868, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62c648a1dc374f27849a372d575da87e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84fad5e013e14e57adcc791b530fbbe9", async() => {
                     BeginContext(1894, 9, true);
                     WriteLiteral("segmento3");
                     EndContext();
@@ -164,7 +164,7 @@ using Ponto_digital.Models;
                 WriteLiteral("\r\n                                ");
                 EndContext();
                 BeginContext(1946, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "872f34636d404f0898529edaaea5e4e9", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "290a911abdbb40afa581951712454e4f", async() => {
                     BeginContext(1972, 9, true);
                     WriteLiteral("segmento4");
                     EndContext();
