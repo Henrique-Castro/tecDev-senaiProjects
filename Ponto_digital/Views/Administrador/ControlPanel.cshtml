@@ -3,23 +3,44 @@ Layout = "_Layout";
 Html.RenderPartial("_HeaderNavBar");
 }
 <section id="contadores">
-    <h2>Comentários</h2>
+    <h2>Total de comentários</h2>
     <div class="container flexContainer">
         <div class="content aguardando">
             <h3>Aguardando:</h3>
-            <p>@Model.ListaDeComentariosEmEspera.Count</p>
+            @if(@Model.ListaDeComentariosEmEspera != null){
+               <p>@Model.ListaDeComentariosEmEspera.Count</p>
+            }else{
+                <p>0</p>
+            }
         </div>
         <div class="content aprovados">
             <h3>Aprovados:</h3>
-            <p>@Model.ListaDeComentariosAprovados.Count</p>
+            @if(@Model.ListaDeComentariosAprovados != null){
+               <p>@Model.ListaDeComentariosAprovados.Count</p>
+            }else{
+                <p>0</p>
+            }
         </div>
         <div class="content reprovados">
             <h3>Reprovados:</h3>
-            <p>@Model.ListaDeComentariosReprovados.Count</p>
+            @if(@Model.ListaDeComentariosReprovados != null){
+               <p>@Model.ListaDeComentariosReprovados.Count</p>
+            }else{
+                <p>0</p>
+            }
+        </div>
+        <div class="content total">
+            <h3>Total:</h3>
+            @if(@Model.ListaDeTodosComentarios != null){
+               <p>@Model.ListaDeTodosComentarios.Count</p>
+            }else{
+                <p>0</p>
+            }
         </div>
     </div>
 </section>
 <section id="emEspera">
+    <h2>Comentários pendentes</h2>
     <table>
         <thead>
             <th>Cliente</th>
@@ -39,9 +60,12 @@ Html.RenderPartial("_HeaderNavBar");
                 <td>
                     @item.Conteudo
                 </td>
-                <td>
-                    <a href='@Url.Action("AprovarComentario", "Administrador")?idComentario=@item.IdComentario'
+                <td class="flexContainer">
+                    <a href='@Url.Action("AlterarComentario", "Administrador")?idComentario=@item.IdComentario&situacao=Aprovado'
                         class="btn aprovar">Aprovar</a>
+                        <div class="miniBar"></div>
+                    <a href='@Url.Action("AlterarComentario", "Administrador")?idComentario=@item.IdComentario&situacao=Reprovado'
+                        class="btn reprovar">Reprovar</a>
                 </td>
             </tr>
             }

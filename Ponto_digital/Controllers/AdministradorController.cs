@@ -12,15 +12,13 @@ namespace Ponto_digital.Controllers {
             ViewBag.Adm = HttpContext.Session.GetString (ConstantesUtils.SESSION_ADMINISTRADOR);
             return View ("ControlPanel", ComentarioRepository.ClassificarComentarios ());
         }
-
         [HttpGet]
-        public IActionResult AprovarComentario (int idComentario) {
-            var comentarioViewModel = ComentarioRepository.ClassificarComentarios ();
-            ComentarioRepository.EditarSituacao (ComentarioRepository.ObterComentarioPorId (idComentario), "Aprovado");
+        public IActionResult AlterarComentario (int idComentario, string situacao) {
+            ComentarioRepository.EditarSituacao (ComentarioRepository.ObterComentarioPorId (idComentario), situacao);
             ViewData["ViewName"] = "ControlPanel";
             ViewBag.User = HttpContext.Session.GetString (ConstantesUtils.SESSION_CLIENTE);
             ViewBag.Adm = HttpContext.Session.GetString (ConstantesUtils.SESSION_ADMINISTRADOR);
-            return View ("ControlPanel");
+            return View ("ControlPanel", ComentarioRepository.ClassificarComentarios ());
         }
     }
 }
