@@ -90,7 +90,7 @@ using Ponto_digital.Models;
             WriteLiteral("            <h2>Login</h2>\r\n            ");
             EndContext();
             BeginContext(288, 525, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67c27d5e97144d789aa37ab7c538267b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fa712a80af74a5086a31e3b026400b0", async() => {
                 BeginContext(347, 459, true);
                 WriteLiteral(@"
                 <div>

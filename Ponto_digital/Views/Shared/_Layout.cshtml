@@ -133,10 +133,49 @@ case "Atendimento":
 <script>
     function FaqToggle(pergunta) {
         var resposta = pergunta.getElementsByTagName("div");
-        if(resposta[0].classList.contains("invisible1")){
+        if (resposta[0].classList.contains("invisible1")) {
             resposta[0].classList.remove("invisible1");
-        }else{
+        } else {
             resposta[0].classList.add("invisible1");
+        }
+
+    }
+</script>
+break;
+case "ControlPanel":
+<script>
+    function ControllToggle(quadro) {
+        if (quadro.classList.contains("aguardando")) {
+            var lista = document.getElementById("aguardando");
+            if(!lista.classList.contains("visible")){
+                lista.classList.add("visible");
+            }else{
+                lista.classList.remove("visible");
+            }
+        }
+        if (quadro.classList.contains("aprovados")) {
+            var lista = document.getElementById("aprovados");
+            if(!lista.classList.contains("visible")){
+                lista.classList.add("visible");
+            }else{
+                lista.classList.remove("visible");
+            }
+        }
+        if (quadro.classList.contains("reprovados")) {
+            var lista = document.getElementById("reprovados");
+            if(!lista.classList.contains("visible")){
+                lista.classList.add("visible");
+            }else{
+                lista.classList.remove("visible");
+            }
+        }
+        if (quadro.classList.contains("total")) {
+            var lista = document.getElementById("todos");
+            if(!lista.classList.contains("visible")){
+                lista.classList.add("visible");
+            }else{
+                lista.classList.remove("visible");
+            }
         }
         
     }
